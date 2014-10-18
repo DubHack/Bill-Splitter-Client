@@ -10,19 +10,27 @@
 angular.module('billSplitterClientApp')
   .service('data', function data($q) {
     // AngularJS will instantiate a singleton by calling "new" on this function
-    this.getBills = function() {
+    this.getDetails = function() {
       var defer = $q.defer();
-      defer.resolve([{
-        id: 1,
-        name: 'Indian Food',
-        total: 55.32,
-        paid: 12.32
-      }, {
-        id: 2,
-        name: 'Spaceship',
-        total: 1000000.00,
-        paid: 0.05
-      }]);
+      defer.resolve({
+        bills: [{
+          id: 1,
+          name: 'Indian Food',
+          total: 55.32,
+          paid: 12.32
+        }, {
+          id: 2,
+          name: 'Spaceship',
+          total: 1000000.00,
+          paid: 0.05
+        }],
+        requests: [{
+          id: 2,
+          name: 'Small Country',
+          requester: 'Tom Hanks',
+          amount: 1323.00
+        }]
+      });
       return defer.promise;
     }
     this.getBill = function(id) {

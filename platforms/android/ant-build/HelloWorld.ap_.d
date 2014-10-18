@@ -61,7 +61,7 @@
 /home/rice/Developer/Bill-Splitter-Client/platforms/android/assets/www/bower_components/font-awesome/fonts/fontawesome-webfont.woff \
 /home/rice/Developer/Bill-Splitter-Client/platforms/android/assets/www/images/yeoman.d2754b85.png \
 /home/rice/Developer/Bill-Splitter-Client/platforms/android/assets/www/scripts/oldieshim.d41d8cd9.js \
-/home/rice/Developer/Bill-Splitter-Client/platforms/android/assets/www/scripts/scripts.1ecf1739.js \
+/home/rice/Developer/Bill-Splitter-Client/platforms/android/assets/www/scripts/scripts.8309e969.js \
 /home/rice/Developer/Bill-Splitter-Client/platforms/android/assets/www/scripts/vendor.646c702b.js \
 /home/rice/Developer/Bill-Splitter-Client/platforms/android/assets/www/styles/main.7eb967f0.css \
 /home/rice/Developer/Bill-Splitter-Client/platforms/android/assets/www/styles/vendor.25d883da.css \
