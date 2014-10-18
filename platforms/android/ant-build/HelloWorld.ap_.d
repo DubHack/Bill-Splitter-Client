@@ -62,9 +62,9 @@
 /home/rice/Developer/Bill-Splitter-Client/platforms/android/assets/www/images/mastercard_debit.8a7307ab.png \
 /home/rice/Developer/Bill-Splitter-Client/platforms/android/assets/www/images/yeoman.d2754b85.png \
 /home/rice/Developer/Bill-Splitter-Client/platforms/android/assets/www/scripts/oldieshim.d41d8cd9.js \
-/home/rice/Developer/Bill-Splitter-Client/platforms/android/assets/www/scripts/scripts.1b318fb6.js \
+/home/rice/Developer/Bill-Splitter-Client/platforms/android/assets/www/scripts/scripts.8c8619a7.js \
 /home/rice/Developer/Bill-Splitter-Client/platforms/android/assets/www/scripts/vendor.646c702b.js \
-/home/rice/Developer/Bill-Splitter-Client/platforms/android/assets/www/styles/main.b9f8a776.css \
+/home/rice/Developer/Bill-Splitter-Client/platforms/android/assets/www/styles/main.496b0185.css \
 /home/rice/Developer/Bill-Splitter-Client/platforms/android/assets/www/styles/vendor.25d883da.css \
 /home/rice/Developer/Bill-Splitter-Client/platforms/android/assets/www/views/about.html \
 /home/rice/Developer/Bill-Splitter-Client/platforms/android/assets/www/views/add-amount.html \

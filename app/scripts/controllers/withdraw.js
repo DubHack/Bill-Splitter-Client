@@ -23,7 +23,7 @@ angular.module('billSplitterClientApp')
       });
     }
     $scope.withdraw = function(card) {
-      if (!edit && confirm("You are about to transfer "+$scope.balance+" to this card. This will incur a 25 cent fee.")) {
+      if (!card.edit && confirm("You are about to transfer "+$scope.balance+" to this card. This will incur a 25 cent fee.")) {
         data.withdraw(card).then(function(status) {
           window.location = "#/home";
         });

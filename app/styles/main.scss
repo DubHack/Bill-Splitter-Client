@@ -25,6 +25,7 @@ nav.navbar-default {
   border-color: darken($title-bg, 10%);
   .navbar-header {
     color: $title-fg;
+    margin-left: -15px;
     .menu-toggle {
       position: relative;
       float: left;
@@ -46,6 +47,9 @@ nav.navbar-default {
   }
   .navbar-brand {
     font-size: 20px;
+  }
+  .navbar-toggle {
+    display: inline-block;
   }
   .navbar-brand, .navbar-toggle {
     color: inherit;
