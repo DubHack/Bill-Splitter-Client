@@ -8,9 +8,9 @@
  * Controller of the billSplitterClientApp
  */
 angular.module('billSplitterClientApp')
-  .controller('BillCtrl', function ($scope, $rootScope, $routeParams, data) {
+  .controller('BillCtrl', function ($scope, $rootScope, $routeParams, data, $sce) {
     $scope.$watch('bill.name', function() {
-      $rootScope.title = 'Bill: ' + $scope.bill.name;
+      $rootScope.title = 'Bill: ' + ($scope.bill.name || 'New');
     });
     $scope.bill = {
       name: 'Loading...'
@@ -31,6 +31,11 @@ angular.module('billSplitterClientApp')
         }
       });
     };
+    $scope.save = function() {
+      data.saveBill($scope.bill).then(function(status) {
+        window.location = "#/home";
+      });
+    }
     $scope.addPhone = function() {
       var phone = prompt("Add by Phone Number:");
       if (phone) {
@@ -71,7 +76,7 @@ angular.module('billSplitterClientApp')
     if ($routeParams.id=="new") {
       $scope.edit = true;
       $scope.bill = {
-        name: 'New',
+        name: '',
         people: [{
           name: 'You'
         }]
@@ -79,7 +84,13 @@ angular.module('billSplitterClientApp')
     } else {
       $scope.edit = false;
       data.getBill($routeParams.id).then(function(bill) {
+        if (!bill) {
+          window.location = "#/home";
+        }
         $scope.bill = bill;
+        if (bill.location) {
+          $scope.mapUrl = $sce.trustAsResourceUrl('https://www.google.com/maps/embed/v1/place?key=AIzaSyD3LRRqVGdBektRmURuyC6UVo3InzFrp6o%20%20&q=' + bill.location);
+        }
         updatePays();
       });
     }

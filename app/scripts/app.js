@@ -69,6 +69,18 @@ angular
         templateUrl: 'views/bill.html',
         controller: 'BillCtrl'
       })
+      .when('/withdraw', {
+        templateUrl: 'views/withdraw.html',
+        controller: 'WithdrawCtrl'
+      })
+      .when('/request/:id', {
+        templateUrl: 'views/request.html',
+        controller: 'RequestCtrl'
+      })
+      .when('/logout', {
+        templateUrl: 'views/logout.html',
+        controller: 'LogoutCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
@@ -83,9 +95,4 @@ angular
           });
         }
       });
-      $rootScope.signOut = function() {
-        window.localStorage.remove('username');
-        window.localStorage.remove('password');
-        window.location = "#/login";
-      }
     });

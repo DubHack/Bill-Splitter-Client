@@ -1,0 +1,51 @@
+<h2>Withdraw Money to a Card</h2>
+
+<div class="btn-top">
+  <span class="btn-nav">Balance: {{balance}}</span>
+</div>
+<div class="card" ng-repeat="card in cards" ng-class="{edit: card.edit}" ng-click="withdraw(card)">
+  <div class="numbers">
+    <span ng-if="!card.edit">{{card.number_safe}}</span>
+    <input ng-model="card.number_safe" placeholder="XXXX XXXX XXXX XXXX" pattern="[0-9]{13,16}" type="text" ng-disabled="!card.edit" ng-if="card.edit">
+  </div>
+  <div class="expiry">
+    <select ng-model="card.month" ng-disabled="!card.edit">
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+      <option>6</option>
+      <option>7</option>
+      <option>8</option>
+      <option>9</option>
+      <option>10</option>
+      <option>11</option>
+      <option>12</option>
+    </select>/<select ng-model="card.year" ng-disabled="!card.edit">
+      <option>14</option>
+      <option>15</option>
+      <option>16</option>
+      <option>17</option>
+      <option>18</option>
+      <option>19</option>
+      <option>20</option>
+      <option>21</option>
+      <option>22</option>
+      <option>23</option>
+      <option>24</option>
+      <option>25</option>
+    </select>
+  </div>
+  <i class="fa fa-pencil" ng-click="edit(card)"></i>
+  <i class="fa fa-trash-o" ng-click="delete(card)"></i>
+  <i class="fa fa-save" ng-click="save(card)"></i>
+  <input class="cardholder" placeholder="Card Holder" ng-model="card.holder" ng-disabled="!card.edit">
+  <select class="type" ng-model="card.type">
+    <option value="visa debit">Visa</option>
+    <option value="mastercard debit">Mastercard</option>
+  </select>
+  <img class="type" src="images/Visa_Debit_SVG_logo.svg" ng-if="card.type == 'visa debit'">
+  <img class="type" src="images/mastercard_debit.png" ng-if="card.type == 'mastercard debit'">
+</div>
+<button class="btn btn-block btn-primary" ng-click="addCard()">Add a Debit Card</button>

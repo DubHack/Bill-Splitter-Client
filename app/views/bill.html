@@ -1,4 +1,8 @@
 <div class="btn-top">
+  <span ng-if="!edit" class="btn-nav">Total: ${{bill.total}}</span>
+  <a class="btn-add" ng-if="edit">
+    <i class="fa fa-angle-double-right" ng-click="save()"></i>
+  </a>
   <div class="dropdown" ng-if="edit">
     <a class="btn-add" data-toggle="dropdown">
     +
@@ -12,13 +16,16 @@
 </div>
 <div class="rows">
   <div class="row" ng-if="edit">
+    <label>Name</label>
+    <input type="text" class="form-control" placeholder="Name" ng-model="bill.name">
+    <br>
     <label>Total</label>
     <div class="input-group">
       <div class="input-group-addon">$</div>
       <input type="number" class="form-control" placeholder="Total" ng-model="bill.total">
     </div>
   </div>
-  <div class="row" ng-repeat="person in bill.people">
+  <div class="row" ng-repeat="person in bill.people" ng-class="{paid: person.paid}">
     <div class="title">
       {{person.name}}
     </div>
@@ -26,11 +33,18 @@
       {{person.phone}} {{person.email}}
     </div>
     <div class="right">
-      $<span class="dollar-amount">{{person.pays}}</span>
+      $<span class="dollar-amount">{{person.amount || person.pays}}</span>
 
-      <button class="btn btn-default" ng-click="increase(person)">
+      <button class="btn btn-default" ng-click="increase(person)" ng-if="edit">
         {{person.modifier}}x
       </button>
     </div>
   </div>
 </div>
+
+<iframe ng-if="bill.location"
+  width="600"
+  height="200"
+  frameborder="0" style="border:0"
+                  src="{{mapUrl}}">
+</iframe>

@@ -12,6 +12,7 @@ angular.module('billSplitterClientApp')
     $rootScope.title = 'Bills';
     $scope.bills = [];
     data.getDetails().then(function(details) {
+      $scope.balance = details.balance.toFixed(2);
       $scope.bills = details.bills;
       $scope.requests = details.requests;
     });

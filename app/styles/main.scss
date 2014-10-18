@@ -17,6 +17,12 @@ $button-dark: $border;
   padding: 30px;
 }
 
+iframe {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  right: 0;
+}
 
 button, a, input, .input-group-addon {
   box-shadow: none !important;
@@ -37,12 +43,102 @@ button, a, input, .input-group-addon {
     opacity: 1;
   }
 }
+.card {
+  font-family: monospace;
+  border-radius: 8px;
+  border: 1px solid darken($border, 20%);
+  padding: 0.4cm;
+  margin: 10px auto;
+  width: 85.60mm;
+  height: 53.98mm;
+  position: relative;
+  &:not(.edit) {
+    &, * {
+      cursor: pointer;
+    }
+    .fa-save, .fa-trash-o, select.type {
+      display: none;
+    }
+    select, input {
+      background-color: transparent;
+      border: none;
+      -webkit-appearance: initial;
+    }
+  }
+  &.edit {
+    img, .fa-pencil {
+      display: none;
+    }
+  }
+  & > * {
+    position: absolute;
+  }
+  input {
+    border: 0;
+    border-bottom: 1px solid darken($border, 20%);
+  }
+  select {
+    background-color: white;
+  }
+  .numbers {
+    input {
+      text-align: center;
+      width: 100%;
+    }
+    text-align: center;
+    font-size: 18pt;
+    line-height: 18pt;
+    top: 50%;
+    left: 0;
+    padding: 0 0.4cm;
+    width: 100%;
+  }
+  img.type {
+    height: 55px;
+  }
+  .fa {
+    position: initial;
+    float: right;
+    font-size: 16pt;
+    display: inline-block;
+    padding: 5px;
+    cursor: pointer;
+    &:active {
+      background-color: $border;
+    }
+  }
+  .type {
+    bottom: 10px;
+    right: 0.4cm;
+  }
+  .expiry {
+    font-size: 14pt;
+    line-height: 14pt;
+    left: 40%;
+    top: 68%;
+    &:before {
+      display: inline-block;
+      content: "GOOD THRU";
+      font-size: 6pt;
+      line-height: 6pt;
+      width: 10px;
+    }
+  }
+  .cardholder {
+    left: 0.4cm;
+    font-size: 14pt;
+    line-height: 14pt;
+    text-transform: uppercase;
+    bottom: 10px;
+    width: 180px;
+  }
+}
 .btn-top {
   position: fixed;
   top: 0;
   right:0;
   z-index: 2000;
-  padding: 10px;
+  padding-right: 10px;
   height: 50px;
   .dropdown.open {
     .btn-add {
@@ -50,18 +146,27 @@ button, a, input, .input-group-addon {
     }
     .dropdown-menu {
       margin-right: -10px;
-      margin-top: 10px;
+      margin-top: 0;
       left: auto;
       right: 0;
       border-radius: 0;
     }
   }
-  .btn-add {
+  .dropdown {
+    float: right;
+  }
+  .btn-add, .btn-nav {
     padding: 10px 16px;
     line-height: 30px;
     margin-right: -10px;
     height: 50px;
-    font-size: 30px;
+    float: right;
+    &.btn-add {
+      font-size: 30px;
+    }
+    &.btn-nav {
+      display: inline-block;
+    }
     font-weight: 100;
     color: inherit;
     &:hover {
@@ -120,6 +225,9 @@ error {
       font-weight: bold;
       background-color: #F0F0F0;
       border-bottom: 1px solid #ddd;
+    }
+    &.paid {
+      background-color: lighten(#98FB98, 15%);
     }
     .text {
       font-size: 1em;

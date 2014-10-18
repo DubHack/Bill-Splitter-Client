@@ -42,7 +42,7 @@
       <div class="menu">
         <ul class="nav">
           <li class="active"><a href="#/home">Home</a></li>
-          <li><a ng-click="signOut()">Sign Out</a></li>
+          <li><a href="#/logout">Sign Out</a></li>
         </ul>
       </div>
 
@@ -62,6 +62,8 @@
        ga('send', 'pageview');
     </script>
 
+
+
     <!-- build:js(.) scripts/oldieshim.js -->
     <!--[if lt IE 9]>
     <script src="bower_components/es5-shim/es5-shim.js"></script>
@@ -71,6 +73,7 @@
     <script src="cordova.js"></script>
     <script src="telephonenumber.js"></script>
     <script src="ContactChooser.js"></script>
+    <script src="https://checkout.stripe.com/checkout.js"></script>
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
@@ -107,6 +110,9 @@
         <script src="scripts/controllers/add-amount.js"></script>
         <script src="scripts/services/data.js"></script>
         <script src="scripts/controllers/bill.js"></script>
+        <script src="scripts/controllers/withdraw.js"></script>
+        <script src="scripts/controllers/request.js"></script>
+        <script src="scripts/controllers/logout.js"></script>
         <!-- endbuild -->
 </body>
 </html>
