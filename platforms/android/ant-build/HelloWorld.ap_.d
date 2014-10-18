@@ -40,6 +40,8 @@
 /home/rice/Developer/Bill-Splitter-Client/platforms/android/assets/www/styles \
 /home/rice/Developer/Bill-Splitter-Client/platforms/android/assets/www/views \
 /home/rice/Developer/Bill-Splitter-Client/platforms/android/assets/www/cordova.js \
+/home/rice/Developer/Bill-Splitter-Client/platforms/android/assets/www/plugins \
+/home/rice/Developer/Bill-Splitter-Client/platforms/android/assets/www/telephonenumber.js \
 /home/rice/Developer/Bill-Splitter-Client/platforms/android/assets/www/cordova_plugins.js \
 /home/rice/Developer/Bill-Splitter-Client/platforms/android/assets/www/phonegap.js \
 /home/rice/Developer/Bill-Splitter-Client/platforms/android/assets/www/bower_components/bootstrap-sass-official \
@@ -59,13 +61,14 @@
 /home/rice/Developer/Bill-Splitter-Client/platforms/android/assets/www/bower_components/font-awesome/fonts/fontawesome-webfont.woff \
 /home/rice/Developer/Bill-Splitter-Client/platforms/android/assets/www/images/yeoman.d2754b85.png \
 /home/rice/Developer/Bill-Splitter-Client/platforms/android/assets/www/scripts/oldieshim.d41d8cd9.js \
-/home/rice/Developer/Bill-Splitter-Client/platforms/android/assets/www/scripts/scripts.c3e965d6.js \
-/home/rice/Developer/Bill-Splitter-Client/platforms/android/assets/www/scripts/vendor.d133fd72.js \
-/home/rice/Developer/Bill-Splitter-Client/platforms/android/assets/www/styles/main.735500ef.css \
+/home/rice/Developer/Bill-Splitter-Client/platforms/android/assets/www/scripts/scripts.1ecf1739.js \
+/home/rice/Developer/Bill-Splitter-Client/platforms/android/assets/www/scripts/vendor.646c702b.js \
+/home/rice/Developer/Bill-Splitter-Client/platforms/android/assets/www/styles/main.7eb967f0.css \
 /home/rice/Developer/Bill-Splitter-Client/platforms/android/assets/www/styles/vendor.25d883da.css \
 /home/rice/Developer/Bill-Splitter-Client/platforms/android/assets/www/views/about.html \
 /home/rice/Developer/Bill-Splitter-Client/platforms/android/assets/www/views/add-amount.html \
 /home/rice/Developer/Bill-Splitter-Client/platforms/android/assets/www/views/add.html \
+/home/rice/Developer/Bill-Splitter-Client/platforms/android/assets/www/views/bill.html \
 /home/rice/Developer/Bill-Splitter-Client/platforms/android/assets/www/views/home.html \
 /home/rice/Developer/Bill-Splitter-Client/platforms/android/assets/www/views/login.html \
 /home/rice/Developer/Bill-Splitter-Client/platforms/android/assets/www/views/main.html \

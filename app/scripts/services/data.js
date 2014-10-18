@@ -29,11 +29,27 @@ angular.module('billSplitterClientApp')
       var defer = $q.defer();
       defer.resolve({
         name: 'Spaceship',
+        total: 1000000.00,
         people: [{
+          name: 'You'
+        }, {
           name: 'Tristan',
           phone: '(206)382-2834'
         }]
       });
       return defer.promise;
+    }
+    this.signup = function(details) {
+      var defer = $q.defer();
+      defer.resolve(true);
+      return defer.promise;
+    }
+    this.isAuthed = function() {
+      var defer = $q.defer();
+      defer.resolve(window.localStorage.getItem('username') && window.localStorage.getItem('password'));
+      return defer.promise;
+    }
+    this.getCards = function() {
+      // stub
     }
   });

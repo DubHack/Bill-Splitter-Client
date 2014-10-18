@@ -33,7 +33,7 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">{{title}}</a>
+            <span class="navbar-brand">{{title}}</span>
           </div>
 
           <!-- Collect the nav links, forms, and other content for toggling -->
@@ -42,7 +42,7 @@
       <div class="menu">
         <ul class="nav">
           <li class="active"><a href="#/home">Home</a></li>
-          <li><a href="#">Link</a></li>
+          <li><a ng-click="signOut()">Sign Out</a></li>
         </ul>
       </div>
 
@@ -69,6 +69,7 @@
     <![endif]-->
     <!-- endbuild -->
     <script src="cordova.js"></script>
+    <script src="telephonenumber.js"></script>
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
@@ -91,6 +92,7 @@
     <script src="bower_components/angular-animate/angular-animate.js"></script>
     <script src="bower_components/angular-touch/angular-touch.js"></script>
     <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/lodash/dist/lodash.compat.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 

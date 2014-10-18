@@ -48,17 +48,10 @@ angular
   ])
   .config(function ($routeProvider) {
     $routeProvider
-      .when('/main', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
-      })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl'
-      })
       .when('/', {
         templateUrl: 'views/login.html',
-        controller: 'LoginCtrl'
+        controller: 'LoginCtrl',
+        noAuth: true
       })
       .when('/home', {
         templateUrl: 'views/home.html',
@@ -79,4 +72,20 @@ angular
       .otherwise({
         redirectTo: '/'
       });
-  });
+    }).run(function($rootScope, data) {
+      $rootScope.$on("$routeChangeStart", function(event, next, current) {
+        if(!(next.$$route && next.$$route.noAuth)) {
+          data.isAuthed().then(function(authed) {
+            if (!authed) {
+              event.preventDefault();
+              window.location = "#/login";
+            }
+          });
+        }
+      });
+      $rootScope.signOut = function() {
+        window.localStorage.remove('username');
+        window.localStorage.remove('password');
+        window.location = "#/login";
+      }
+    });

@@ -5,7 +5,10 @@
     <feature name="App">
         <param name="android-package" value="org.apache.cordova.App" />
     </feature>
-    <name>HelloWorld</name>
+    <feature name="TelephoneNumber">
+        <param name="android-package" value="com.simonmacdonald.cordova.plugins.TelephoneNumber" />
+    </feature>
+    <name>BillSplit</name>
     <description>
         Hello World sample application that responds to the deviceready event.
     </description>

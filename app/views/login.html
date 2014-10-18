@@ -1,11 +1,22 @@
 <div class="bill-split">
 
   <h1>Welcome</h1>
-
+  <error>{{error}}</error>
   <form role="form">
+    <label>Email</label>
     <input type="email" class="form-control" placeholder="Email" ng-model="email">
+    <span ng-if="isSignup">
+      <label>Phone Number</label>
+      <input type="tel" class="form-control" placeholder="Phone Number" ng-model="number">
+    </span>
+    <label>Password</label>
     <input type="password" class="form-control" placeholder="Password" ng-model="password">
-    <button type="submit" class="btn btn-default">Register</button> or <a class="btn btn-default" href="/login-a">Login</a>
+    <span ng-if="isSignup">
+      <button type="submit" class="btn btn-primary" ng-click="register()">Register</button> or <button class="btn btn-default" ng-click="toggleLogin()">Login</button>
+    </span>
+    <span ng-if="isSignup == false">
+      <button type="submit" class="btn btn-primary" ng-click="login()">Login</button> or <button class="btn btn-default" ng-click="toggleLogin()">Register</button>
+    </span>
   </form>
 
 </div>
