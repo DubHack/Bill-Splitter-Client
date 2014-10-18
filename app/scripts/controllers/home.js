@@ -11,7 +11,8 @@ angular.module('billSplitterClientApp')
   .controller('HomeCtrl', function ($scope, $rootScope, data) {
     $rootScope.title = 'Bills';
     $scope.bills = [];
-    data.getBills().then(function(bills) {
-      $scope.bills = bills;
+    data.getDetails().then(function(details) {
+      $scope.bills = details.bills;
+      $scope.requests = details.requests;
     });
   });

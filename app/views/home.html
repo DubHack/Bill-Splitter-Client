@@ -7,7 +7,7 @@
   <a class="row category">Payment Requests</a>
   <a class="row click" ng-repeat="request in requests" href="#/request/{{request.id}}">
     <div class="title">{{request.name}}</div>
-    <div class="text">{{requst.requester}} is requesting ${{request.amount}}</div>
+    <div class="text">{{request.requester}} is requesting ${{request.amount}}</div>
   </a>
   <a class="row category">My Bills</a>
   <a class="row click" ng-repeat="bill in bills" href="#/bill/{{bill.id}}">

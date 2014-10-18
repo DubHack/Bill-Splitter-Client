@@ -1,8 +1,14 @@
 <div class="btn-top">
-
-  <a href="#/add" class="btn-add">
-  +
-  </a>
+  <div class="dropdown" ng-if="edit">
+    <a class="btn-add" data-toggle="dropdown">
+    +
+    </a>
+    <ul class="dropdown-menu" role="menu">
+      <li ng-if="hasContactChooser"><a role="menuitem" tabindex="-1" ng-click="addContact()">From Contacts</a></li>
+      <li><a role="menuitem" tabindex="-1" ng-click="addEmail()">By Email</a></li>
+      <li><a role="menuitem" tabindex="-1" ng-click="addPhone()">By Phone Number</a></li>
+    </ul>
+  </div>
 </div>
 <div class="rows">
   <div class="row" ng-if="edit">
@@ -17,7 +23,7 @@
       {{person.name}}
     </div>
     <div class="text">
-      {{person.phone}}
+      {{person.phone}} {{person.email}}
     </div>
     <div class="right">
       $<span class="dollar-amount">{{person.pays}}</span>

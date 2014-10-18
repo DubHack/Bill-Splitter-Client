@@ -8,6 +8,9 @@
     <feature name="TelephoneNumber">
         <param name="android-package" value="com.simonmacdonald.cordova.plugins.TelephoneNumber" />
     </feature>
+    <feature name="ContactChooser">
+        <param name="android-package" value="com.monday.cordova.ContactChooserPlugin" />
+    </feature>
     <name>BillSplit</name>
     <description>
         Hello World sample application that responds to the deviceready event.
