@@ -8,6 +8,7 @@
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
@@ -20,21 +21,33 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
+    <div class="darken"></div>
     <div class="container">
-      <div class="header">
-        <ul class="nav nav-pills pull-right">
-          <li class="active"><a ng-href="#">Home</a></li>
-          <li><a ng-href="#/about">About</a></li>
-          <li><a ng-href="#">Contact</a></li>
+      <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container-fluid">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">{{title}}</a>
+          </div>
+
+          <!-- Collect the nav links, forms, and other content for toggling -->
+        </div>
+      </nav>
+      <div class="menu">
+        <ul class="nav">
+          <li class="active"><a href="#/home">Home</a></li>
+          <li><a href="#">Link</a></li>
         </ul>
-        <h3 class="text-muted">billSplitterClient</h3>
       </div>
 
       <div ng-view=""></div>
 
-      <div class="footer">
-        <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
-      </div>
     </div>
 
 
@@ -55,7 +68,7 @@
     <script src="bower_components/json3/lib/json3.js"></script>
     <![endif]-->
     <!-- endbuild -->
-
+    <script src="cordova.js"></script>
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
@@ -85,6 +98,12 @@
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
         <script src="scripts/controllers/about.js"></script>
+        <script src="scripts/controllers/login.js"></script>
+        <script src="scripts/controllers/home.js"></script>
+        <script src="scripts/controllers/add.js"></script>
+        <script src="scripts/controllers/add-amount.js"></script>
+        <script src="scripts/services/data.js"></script>
+        <script src="scripts/controllers/bill.js"></script>
         <!-- endbuild -->
 </body>
 </html>

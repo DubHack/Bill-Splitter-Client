@@ -9,8 +9,8 @@
     <description>
         Hello World sample application that responds to the deviceready event.
     </description>
-    <author email="support@phonegap.com" href="http://phonegap.com">
-        PhoneGap Team
+    <author email="bill-splitter@fn.lc" href="http://github.com/DubHack">
+        Bill Split Team
     </author>
     <preference name="permissions" value="none" />
     <preference name="phonegap-version" value="3.5.0" />

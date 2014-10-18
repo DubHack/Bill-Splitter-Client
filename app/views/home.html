@@ -1,0 +1,9 @@
+<a href="#/add" class="btn-add">
++
+</a>
+<div class="rows">
+  <a class="row click" ng-repeat="bill in bills" href="#/bill/{{bill.id}}">
+    <div class="title">{{bill.name}}</div>
+    <div class="text">Received ${{bill.paid}} of ${{bill.total}}</div>
+  </a>
+</div>
