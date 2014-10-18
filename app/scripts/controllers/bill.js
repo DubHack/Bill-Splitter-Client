@@ -90,6 +90,11 @@ angular.module('billSplitterClientApp')
         $scope.bill = bill;
         if (bill.location) {
           $scope.mapUrl = $sce.trustAsResourceUrl('https://www.google.com/maps/embed/v1/place?key=AIzaSyD3LRRqVGdBektRmURuyC6UVo3InzFrp6o%20%20&q=' + bill.location);
+          var resize = function() {
+            $('iframe.map').height(window.innerHeight - $('iframe.map').offset().top);
+          }
+          setTimeout(resize);
+          $(window).resize(resize);
         }
         updatePays();
       });

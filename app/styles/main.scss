@@ -3,9 +3,62 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 @import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
 // endbower
 
-$blue: #66afe9;
+//$blue: #008AB8;
+$blue: darken(#66afe9, 10%);
 $border: #eee;
 $button-dark: $border;
+$font-size: 16px;
+
+$title-bg: $blue;
+$title-bg-hover: rgba(255,255,255, 0.2);
+$title-fg: white;
+$title-fg-hover: white;//rgba(255,255,255, 0.8);
+
+.form-control {
+  height: 36px;
+}
+body, a, input.form-control, button, .btn, select.form-control {
+  font-size: $font-size;
+}
+nav.navbar-default {
+  background-color: $title-bg;
+  border-color: darken($title-bg, 10%);
+  .navbar-header {
+    color: $title-fg;
+    .menu-toggle {
+      position: relative;
+      float: left;
+      cursor: pointer;
+      .icon-bar {
+        transition-duration: 0.15s;
+      }
+      &.open {
+        .icon-bar {
+          transform: translate3d(-6px, 0, 0);
+        }
+      }
+      &:hover {
+        text-decoration: none;
+        color: $title-fg-hover;
+        background-color: $title-bg-hover;
+      }
+    }
+  }
+  .navbar-brand {
+    font-size: 20px;
+  }
+  .navbar-brand, .navbar-toggle {
+    color: inherit;
+    .icon-bar {
+      background-color: $title-fg;
+    }
+    &:active, &:hover, &:focus {
+      text-decoration: none;
+      color: inherit;
+      background-color: transparent;
+    }
+  }
+}
 
 @mixin center {
   top: 50%;
@@ -145,6 +198,7 @@ button, a, input, .input-group-addon {
       background-color: $button-dark;
     }
     .dropdown-menu {
+      //font-size: 16px;//$font-size;
       margin-right: -10px;
       margin-top: 0;
       left: auto;
@@ -161,6 +215,7 @@ button, a, input, .input-group-addon {
     margin-right: -10px;
     height: 50px;
     float: right;
+    color: $title-fg;
     &.btn-add {
       font-size: 30px;
     }
@@ -168,13 +223,10 @@ button, a, input, .input-group-addon {
       display: inline-block;
     }
     font-weight: 100;
-    color: inherit;
-    &:hover {
-      color: inherit;
+    &:active, &:hover {
       text-decoration: none;
-    }
-    &:active {
-      background-color: $button-dark;
+      color: $title-fg-hover;
+      background-color: $title-bg-hover;
     }
   }
 }
@@ -218,7 +270,7 @@ error {
     display: block;
     color: inherit;
     position: relative;
-    min-height: 59px;
+    min-height: 65px;
     &.category {
       min-height: 0;
       padding: 5px 10px;
@@ -241,13 +293,13 @@ error {
     &.click:before {
       content: "›";
       font-size: 40px;
-      line-height: 34px;
+      line-height: 42px;
       float: right;
     }
     .right {
       padding: 10px;
       position: absolute;
-      line-height: 39px;
+      line-height: 45px;
       right: 0;
       top: 0;
     }
@@ -294,7 +346,7 @@ body > .container, body, html {
   height: 50px;
   padding: 0;
   border-radius: 0;
-  padding-right: 20px;
+  padding-right: 10px;
 }
 
 /* Space out content a bit */

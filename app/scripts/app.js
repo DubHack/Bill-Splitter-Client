@@ -4,6 +4,7 @@
   function hideNav() {
     $(".menu").removeClass('open');
     $(".darken").removeClass('open');
+    $(".menu-toggle").removeClass('open');
     setTimeout(function() {
       $('.darken').hide();
     }, 150);
@@ -14,6 +15,7 @@
     setTimeout(function() {
       $('.darken').addClass('open');
       $(".menu").addClass('open');
+      $(".menu-toggle").addClass('open');
     });
     closed = false;
   }
@@ -26,7 +28,7 @@
   }
 
   $(document.body).on('click', 'a, .darken', hideNav);
-  $(document.body).on('click', '.navbar-toggle', toggleNav);
+  $(document.body).on('click', '.menu-toggle', toggleNav);
 })();
 
 /**

@@ -1,4 +1,4 @@
-<h2>Withdraw Money to a Card</h2>
+<h2>Withdraw Money to a Debit Card</h2>
 
 <div class="btn-top">
   <span class="btn-nav">Balance: {{balance}}</span>
@@ -37,7 +37,7 @@
       <option>25</option>
     </select>
   </div>
-  <i class="fa fa-pencil" ng-click="edit(card)"></i>
+  <i class="fa fa-pencil" ng-click="edit(card); $event.stopPropagation();"></i>
   <i class="fa fa-trash-o" ng-click="delete(card)"></i>
   <i class="fa fa-save" ng-click="save(card)"></i>
   <input class="cardholder" placeholder="Card Holder" ng-model="card.holder" ng-disabled="!card.edit">
@@ -48,4 +48,4 @@
   <img class="type" src="images/Visa_Debit_SVG_logo.svg" ng-if="card.type == 'visa debit'">
   <img class="type" src="images/mastercard_debit.png" ng-if="card.type == 'mastercard debit'">
 </div>
-<button class="btn btn-block btn-primary" ng-click="addCard()">Add a Debit Card</button>
+<button class="btn btn-block btn-primary btn-lg" ng-click="addCard()">Add a Debit Card</button>

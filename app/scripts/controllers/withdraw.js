@@ -9,7 +9,7 @@
  */
 angular.module('billSplitterClientApp')
   .controller('WithdrawCtrl', function ($rootScope, $scope, data) {
-    $rootScope.title = "Withdraw to Debit Card";
+    $rootScope.title = "Withdraw";
     $scope.balance = "Loading...";
     data.getDetails().then(function(details) {
       $scope.balance = '$' + details.balance.toFixed(2);
@@ -23,7 +23,7 @@ angular.module('billSplitterClientApp')
       });
     }
     $scope.withdraw = function(card) {
-      if (confirm("You are about to transfer "+$scope.balance+" to this card. This will incur a 25 cent fee.")) {
+      if (!edit && confirm("You are about to transfer "+$scope.balance+" to this card. This will incur a 25 cent fee.")) {
         data.withdraw(card).then(function(status) {
           window.location = "#/home";
         });
